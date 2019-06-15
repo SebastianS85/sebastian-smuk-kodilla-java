@@ -7,7 +7,7 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
+import static org.junit.Assert.assertArrayEquals;
 import java.util.ArrayList;
 
 public class CollectionTestSuite {
@@ -32,7 +32,14 @@ public class CollectionTestSuite {
             list.add(i);
         }
 
-        Assert.assertTrue(testExecutor.exterminate(list).size()==50);
+        ArrayList<Integer>testList= new ArrayList<>();
+        for(int i=0;i<100;i++){
+            if(i%2==0){
+                testList.add(i);
+            }
+        }
+
+        assertArrayEquals(testExecutor.exterminate(list).toArray(), testList.toArray());
 
     }
 

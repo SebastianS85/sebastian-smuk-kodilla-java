@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class OddNumbersExterminator {
 
-    ArrayList<Integer> oddNumbersList=new ArrayList<Integer>();
+
 
     public ArrayList<Integer> exterminate(ArrayList<Integer> numbers){
-
+        ArrayList<Integer> oddNumbersList=new ArrayList<Integer>();
         for (int i=0;i<numbers.size();i++) {
            int odd=numbers.get(i)%2;
 
