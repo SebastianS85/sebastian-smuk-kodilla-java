@@ -8,6 +8,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 
 public class CollectionTestSuite {
@@ -39,7 +41,7 @@ public class CollectionTestSuite {
             }
         }
 
-        assertArrayEquals(testExecutor.exterminate(list).toArray(), testList.toArray());
+        assertEquals(testList, testExecutor.exterminate(list));
 
     }
 
