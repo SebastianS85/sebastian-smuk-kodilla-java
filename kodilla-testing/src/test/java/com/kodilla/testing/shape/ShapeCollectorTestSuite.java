@@ -100,7 +100,7 @@ public class ShapeCollectorTestSuite {
         testCollector.addFigure(new Circle(5));
         System.out.println("testing get figure with negative index");
         //Then
-        Assert.assertEquals(null,testCollector.getFigure(-2));
+        Assert.assertNull(testCollector.getFigure(-2));
 
     }
     @Test
@@ -114,7 +114,7 @@ public class ShapeCollectorTestSuite {
         testCollector.addFigure(new Circle(5));
         System.out.println("testing get figure with index out of bounds");
         //Then
-        Assert.assertEquals(null,testCollector.getFigure(8));
+        Assert.assertNull(testCollector.getFigure(8));
 
 
     }
