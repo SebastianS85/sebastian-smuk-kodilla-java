@@ -88,5 +88,35 @@ public class ShapeCollectorTestSuite {
         Assert.assertEquals(testList,testCollector.showFigures());
 
     }
+    @Test
+    public void testNegativeIndex(){
+
+        //Given
+        ShapeCollector testCollector= new ShapeCollector();
+        //When
+        testCollector.addFigure(new Circle(5));
+        testCollector.addFigure(new Triangle(8,9));
+        testCollector.addFigure(new Circle(6));
+        testCollector.addFigure(new Circle(5));
+        System.out.println("testing get figure with negative index");
+        //Then
+        Assert.assertEquals(null,testCollector.getFigure(-2));
+
+    }
+    @Test
+    public void testIndexOut(){
+
+        ShapeCollector testCollector= new ShapeCollector();
+        //When
+        testCollector.addFigure(new Circle(5));
+        testCollector.addFigure(new Triangle(8,9));
+        testCollector.addFigure(new Circle(6));
+        testCollector.addFigure(new Circle(5));
+        System.out.println("testing get figure with index out of bounds");
+        //Then
+        Assert.assertEquals(null,testCollector.getFigure(8));
+
+
+    }
 
 }

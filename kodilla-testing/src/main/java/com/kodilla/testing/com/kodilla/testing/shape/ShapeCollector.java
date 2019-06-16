@@ -18,6 +18,14 @@ public class ShapeCollector {
     }
 
     public Shape getFigure(int n) {
+        if(n<0){
+
+            System.out.println("Index negative");
+            return null;
+        }
+        else if(n>shapeList.size()){
+            System.out.println("Index out of bounds");
+            return null;}
         return shapeList.get(n);
     }
 
