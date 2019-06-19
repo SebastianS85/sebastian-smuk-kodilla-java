@@ -9,11 +9,9 @@ public class ForumStatistic {
     private double meanPostPUser;
     private double meanCommentsPUser;
     private double meanCommentsPPost;
-    Statistics statistic;
 
-    public ForumStatistic(Statistics statistic) {
-        this.statistic = statistic;
-    }
+
+
 
     public void calculateAdvStatistics(Statistics statistics) {
 
@@ -39,18 +37,18 @@ public class ForumStatistic {
         return quantityOfPosts;
     }
 
-    public double getMeanPostPUser() {if(statistic.usersNames().isEmpty())return 0;
+    public double getMeanPostPUser() {if(getQuantityOfUsers()==0){return 0;}
 
         return meanPostPUser;
     }
 
-    public double getMeanCommentsPUser() {if(statistic.usersNames().isEmpty())return 0;
-
+    public double getMeanCommentsPUser() {if(getQuantityOfUsers()==0){return 0;}
+else if(getMeanCommentsPPost()==0){return 0;}
         return meanCommentsPUser;
     }
 
-    public double getMeanCommentsPPost() {if(statistic.usersNames().isEmpty())return 0;
-    else if(statistic.postsCount()==0)return 0;
+    public double getMeanCommentsPPost() {if(getQuantityOfUsers()==0){return 0;}
+
         return meanCommentsPPost;
     }
     public void showStatistics(){

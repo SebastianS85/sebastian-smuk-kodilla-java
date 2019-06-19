@@ -38,7 +38,7 @@ public class ForumTestSuite {
        when(statisticsMock.usersNames()).thenReturn(users);
        when(statisticsMock.postsCount()).thenReturn(0);
 
-       ForumStatistic data=new ForumStatistic(statisticsMock);
+       ForumStatistic data=new ForumStatistic();
        data.calculateAdvStatistics(statisticsMock);
        data.showStatistics();
        Assert.assertEquals(0.0,data.getMeanPostPUser(),0.0);
@@ -54,7 +54,7 @@ public class ForumTestSuite {
         when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.postsCount()).thenReturn(100);
         when(statisticsMock.commentsCount()).thenReturn(120);
-        ForumStatistic data=new ForumStatistic(statisticsMock);
+        ForumStatistic data=new ForumStatistic();
         data.calculateAdvStatistics(statisticsMock);
         data.showStatistics();
         Assert.assertEquals(0.1,data.getMeanPostPUser(),0.0);
@@ -72,7 +72,7 @@ public class ForumTestSuite {
         when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.postsCount()).thenReturn(100);
         when(statisticsMock.commentsCount()).thenReturn(0);
-        ForumStatistic data=new ForumStatistic(statisticsMock);
+        ForumStatistic data=new ForumStatistic();
         data.calculateAdvStatistics(statisticsMock);
         data.showStatistics();
         Assert.assertEquals(0.1,data.getMeanPostPUser(),0.0);
@@ -90,7 +90,7 @@ public class ForumTestSuite {
         when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.postsCount()).thenReturn(100);
         when(statisticsMock.commentsCount()).thenReturn(50);
-        ForumStatistic data=new ForumStatistic(statisticsMock);
+        ForumStatistic data=new ForumStatistic();
         data.calculateAdvStatistics(statisticsMock);
         data.showStatistics();
         Assert.assertEquals(1.0,data.getMeanPostPUser(),0.0);
@@ -108,7 +108,7 @@ public class ForumTestSuite {
         when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.postsCount()).thenReturn(50);
         when(statisticsMock.commentsCount()).thenReturn(100);
-        ForumStatistic data=new ForumStatistic(statisticsMock);
+        ForumStatistic data=new ForumStatistic();
         data.calculateAdvStatistics(statisticsMock);
         data.showStatistics();
         Assert.assertEquals(0.5,data.getMeanPostPUser(),0.0);
@@ -123,7 +123,7 @@ public class ForumTestSuite {
         when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.postsCount()).thenReturn(50);
         when(statisticsMock.commentsCount()).thenReturn(100);
-        ForumStatistic data=new ForumStatistic(statisticsMock);
+        ForumStatistic data=new ForumStatistic();
         data.calculateAdvStatistics(statisticsMock);
         data.showStatistics();
         Assert.assertEquals(0.0,data.getMeanPostPUser(),0.0);
@@ -141,7 +141,7 @@ public class ForumTestSuite {
         when(statisticsMock.usersNames()).thenReturn(users);
         when(statisticsMock.postsCount()).thenReturn(80);
         when(statisticsMock.commentsCount()).thenReturn(150);
-        ForumStatistic data=new ForumStatistic(statisticsMock);
+        ForumStatistic data=new ForumStatistic();
         data.calculateAdvStatistics(statisticsMock);
         data.showStatistics();
         Assert.assertEquals(0.8,data.getMeanPostPUser(),0.0);
