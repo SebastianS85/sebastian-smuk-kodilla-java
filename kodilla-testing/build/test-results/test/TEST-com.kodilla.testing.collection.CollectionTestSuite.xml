@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.collection.CollectionTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-06-21T17:05:25" hostname="DESKTOP-GJGJAGF" time="0.008">
+  <properties/>
+  <testcase name="testList" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.006"/>
+  <testcase name="testCaseEmptyList" classname="com.kodilla.testing.collection.CollectionTestSuite" time="0.001"/>
+  <system-out><![CDATA[Test Case: begin
+testing full list
+Test Case: end
+Test Case: begin
+testing empty list
+Test Case: end
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.testing.shape.ShapeCollectorTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-06-21T17:05:25" hostname="DESKTOP-GJGJAGF" time="0.007">
+  <properties/>
+  <testcase name="testShowFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.003"/>
+  <testcase name="testRemoveFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <testcase name="testAddFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <testcase name="testIndexOut" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
+  <testcase name="testGetFigure" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.001"/>
+  <testcase name="testNegativeIndex" classname="com.kodilla.testing.shape.ShapeCollectorTestSuite" time="0.0"/>
+  <system-out><![CDATA[This is the beginning of tests.
+Preparing to execute test #1
+testing show figures
+Preparing to execute test #2
+testing removing figure
+Preparing to execute test #3
+testing add figure
+Preparing to execute test #4
+testing get figure with index out of bounds
+Index out of bounds
+Preparing to execute test #5
+testing get figure
+Preparing to execute test #6
+testing get figure with negative index
+Index negative
+All tests are finished.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
