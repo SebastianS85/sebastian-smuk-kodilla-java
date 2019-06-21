@@ -1,6 +1,7 @@
 package com.kodilla.stream;
 
 import com.kodilla.stream.beautifier.PoemBeautifier;
+import com.kodilla.stream.iterate.NumbersGenerator;
 import com.kodilla.stream.lambda.ExpressionExecutor;
 import com.kodilla.stream.reference.FunctionalCalculator;
 import com.kodilla.stream.beautifier.PoemBeautifier;
@@ -31,7 +32,8 @@ public class StreamMain {
         poemBeautifier.beautify("filter with char changer",(text)->text.replace('e','x'));
         poemBeautifier.beautify("filter with text changer",(text)->text.replaceAll("filter","the new one"));
 
-
+        System.out.println("Using Stream to generate even numbers from 1 to 20");
+        NumbersGenerator.generateEven(20);
 
     }
 
