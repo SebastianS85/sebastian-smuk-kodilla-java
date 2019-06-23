@@ -1,43 +1,31 @@
 package com.kodilla.stream;
 
-import com.kodilla.stream.beautifier.PoemBeautifier;
-import com.kodilla.stream.iterate.NumbersGenerator;
-import com.kodilla.stream.lambda.ExpressionExecutor;
-import com.kodilla.stream.reference.FunctionalCalculator;
-import com.kodilla.stream.beautifier.PoemBeautifier;
+import com.kodilla.stream.book.Book;
+import com.kodilla.stream.book.BookDirectory;
+import com.kodilla.stream.forumuser.Forum;
+import com.kodilla.stream.forumuser.ForumUser;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 
 public class StreamMain {
+
     public static void main(String[] args) {
-        ExpressionExecutor expressionExecutor = new ExpressionExecutor();
 
-        System.out.println("Calculating expressions with lambdas");
-        expressionExecutor.executeExpression(10, 5, (a, b) -> a + b);
-        expressionExecutor.executeExpression(10, 5, (a, b) -> a - b);
-        expressionExecutor.executeExpression(10, 5, (a, b) -> a * b);
-        expressionExecutor.executeExpression(10, 5, (a, b) -> a / b);
+        Forum forumUser=new Forum();
 
-        System.out.println("Calculating expressions with method references");
-        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::multiplyAByB);
-        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::addAToB);
-        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::subBFromA);
-        expressionExecutor.executeExpression(3, 4, FunctionalCalculator::divideAByB);
-
-        System.out.println("Text beautyfier");
-        PoemBeautifier poemBeautifier=new PoemBeautifier();
-
-        poemBeautifier.beautify("Filter with ABC at the end",(text)->text+"ABC");
-        poemBeautifier.beautify("Filter with ABC at the beginning",(text)->"ABC"+text);
-        poemBeautifier.beautify("filter upper case",(text)->text.toUpperCase());
-        poemBeautifier.beautify("FILTER LOWER CASE",(text)->text.toLowerCase());
-        poemBeautifier.beautify("filter with char changer",(text)->text.replace('e','x'));
-        poemBeautifier.beautify("filter with text changer",(text)->text.replaceAll("filter","the new one"));
-
-        System.out.println("Using Stream to generate even numbers from 1 to 20");
-        NumbersGenerator.generateEven(20);
+        Map<Integer,ForumUser> theResultMapOfUsers= forumUser.getList().stream().filter(user->user.getSex()=='M').filter(user->user.getAge()>20)
+                .filter(user->user.getQuantityOfPosts()>0).collect(Collectors.toMap(ForumUser::getUserId,user->user));
+        System.out.println("# elements: " + theResultMapOfUsers.size());
+        theResultMapOfUsers.entrySet().stream()
+                .map(entry -> entry.getKey() + ": " + entry.getValue())
+                .forEach(System.out::println);
 
     }
-
-
-
-
 }
+
+
+
+
