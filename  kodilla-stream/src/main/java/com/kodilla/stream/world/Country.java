@@ -2,14 +2,14 @@ package com.kodilla.stream.world;
 
 import java.math.BigDecimal;
 
-public class Country implements PeopleQ {
-
+public class Country  {
+    String country;
     BigDecimal quantity;
-     public Country(BigDecimal quantity) {
+     public Country(String country,BigDecimal quantity) {
         this.quantity= quantity;
-
+        this.country=country;
     }
-    @Override
+
     public  BigDecimal getPeopleQuantity(){
 
        return quantity;

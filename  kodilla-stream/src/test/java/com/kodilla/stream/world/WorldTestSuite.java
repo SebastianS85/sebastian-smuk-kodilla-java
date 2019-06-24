@@ -12,18 +12,15 @@ public class WorldTestSuite {
         World world =new World();
 
         //When
-        Country Poland=new Country(new BigDecimal("12345678910"));
-        Country Kongo=new Country(new BigDecimal("12345679999999"));
-        Country China=new Country(new BigDecimal("60000000000"));
 
         Continent Europa=new Continent();
-        Europa.addCountry(Poland);
+        Europa.addCountry(new Country("Poland",new BigDecimal("420700000")));
 
         Continent Africa =new Continent();
-        Africa.addCountry(Kongo);
+        Africa.addCountry(new Country("Kongo",new BigDecimal("12345678910")));
 
         Continent Asia=new Continent();
-        Asia.addCountry(China);
+        Asia.addCountry(new Country("China",new BigDecimal("800000000")));
 
         world.addContinent(Europa);
         world.addContinent(Africa);
@@ -31,7 +28,7 @@ public class WorldTestSuite {
 
         //Then
 
-        BigDecimal expectedQuantity = new BigDecimal("12418025678909");
+        BigDecimal expectedQuantity = new BigDecimal("13566378910");
         Assert.assertEquals(expectedQuantity,world.getPeopleQuantity());
     }
 
