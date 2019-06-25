@@ -22,6 +22,7 @@ public class WorldTestSuite {
         Continent Asia=new Continent();
         Asia.addCountry(new Country("China",new BigDecimal("800000000")));
 
+
         world.addContinent(Europa);
         world.addContinent(Africa);
         world.addContinent(Asia);
