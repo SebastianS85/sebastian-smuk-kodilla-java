@@ -14,4 +14,14 @@ public class ArrayOperationsTestSuite {
         Assert.assertEquals(5.66,adv,0.01);
 
     }
+    @Test
+    public void testGetAverageZero(){
+        //Given
+        int []tab={};
+        //When
+        double adv=ArrayOperations.getAverage(tab);
+        //Then
+        Assert.assertEquals(0,adv,0);
+
+    }
 }
