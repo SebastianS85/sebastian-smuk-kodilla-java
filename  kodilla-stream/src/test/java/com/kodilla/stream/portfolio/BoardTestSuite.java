@@ -171,7 +171,7 @@ public class BoardTestSuite {
         double avrDaysFrom=project.getTaskLists().stream()
                 . filter(inProgressTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
-                .map(t -> DAYS.between(t.getCreated(),LocalDate.now())).collect(Collectors.averagingDouble(c->c));
+                .map(t -> DAYS.between(t.getCreated(),LocalDate.now())).collect(Collectors.averagingDouble(a->a));
 
 
         //Then
