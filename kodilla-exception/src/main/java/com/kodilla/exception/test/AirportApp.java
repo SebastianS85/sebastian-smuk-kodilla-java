@@ -12,10 +12,15 @@ public class AirportApp {
         airportsAvailable.put("Berlin",true);
         airportsAvailable.put("New York",false);
 
+
         if(airportsAvailable.containsKey(flight.getArrivalAirport())&&airportsAvailable
-                .containsKey(flight.getDepartureAirport())){
+                .containsKey(flight.getDepartureAirport())&&airportsAvailable.get(flight.getArrivalAirport())
+                &&airportsAvailable.get(flight.getDepartureAirport())) {
            System.out.println("Flight available");
+
         }
+
+
         else {
             throw new RouteNotFoundException();
         }
