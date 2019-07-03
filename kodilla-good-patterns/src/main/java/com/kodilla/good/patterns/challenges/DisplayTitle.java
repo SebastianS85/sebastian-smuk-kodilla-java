@@ -6,11 +6,15 @@ public class DisplayTitle {
 
     public static void main(String[] args) {
         MovieStore movieStore=new MovieStore();
-        String theResultList=movieStore.getMovies()
-                .values()
-                    .stream()
-                        .map(s->String.valueOf(s))
+
+       String theResultList=movieStore.getMovies()
+               .entrySet()
+                 .stream()
+                    .flatMap(e->e.getValue()
+                       .stream())
                             .collect(Collectors.joining("!","",""));
+
+
         System.out.println(theResultList);
     }
 }
