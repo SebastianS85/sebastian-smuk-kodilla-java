@@ -1,14 +1,26 @@
 package foodService;
 
+import java.util.HashMap;
+
 public class AddRequestRetriever {
 
-    public AddRequest retrieve() {
-        SupplierZip1 firstSupplier=new SupplierZip1("abc Food Co.");
-        Product eggs=new Product("eggs",200);
-        SupplierZip2 secondSupplier= new SupplierZip2("xyz Co.");
-        Product bread=new Product("bread",300);
+    private HashMap<String,FoodSupplier> foodSupplierHashMap=new HashMap<>();
 
-        return new AddRequest(firstSupplier,bread);
+    public AddRequestRetriever() {
+        foodSupplierHashMap.put("bread",new SupplierZip1("abc Co."));
+        foodSupplierHashMap.put("butter",new SupplierZip2("xyz Co."));
+
+
+    }
+
+    public AddRequest retrieve(String productName,int quantity) {
+
+        if(foodSupplierHashMap.containsKey(productName)){
+            FoodSupplier foodSupplier = foodSupplierHashMap.get(productName);
+            return new AddRequest(foodSupplier,new Product(productName,quantity));
+        }
+
+        return null;
     }
 
 }
