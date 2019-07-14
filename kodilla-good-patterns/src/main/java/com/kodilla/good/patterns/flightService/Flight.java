@@ -1,6 +1,6 @@
 package com.kodilla.good.patterns.flightService;
 
-public class Flight extends Travel  {
+public class Flight extends Travel {
 
     private int flightNumber;
 
@@ -15,7 +15,7 @@ public class Flight extends Travel  {
 
     @Override
     public String toString() {
-        return "Flight "+flightNumber+" "+getTravelFrom()+"  "+getTravelTo();
+        return "Flight " + flightNumber + " " + getTravelFrom() + "  " + getTravelTo();
 
     }
 }

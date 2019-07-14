@@ -30,7 +30,7 @@ public class FlightFinder {
         System.out.println("Searching direct flights...");
 
         for (Flight flight : flightsBoard) {
-            if (flight.getTravelFrom() == flightFrom && flight.getTravelTo() == flightTo) {
+            if (flight.getTravelFrom().equals(flightFrom) && flight.getTravelTo().equals(flightTo)) {
                 availableDirectFlights.put(flight.getFlightNumber(), flight);
             }
         }
@@ -41,7 +41,7 @@ public class FlightFinder {
     public HashMap<Integer, Flight> findAllConnections(String flightFrom) {
         HashMap<Integer, Flight> allFlights = new HashMap<>();
         for (Flight flight : flightsBoard) {
-            if (flight.getTravelFrom() == flightFrom) {
+            if (flight.getTravelFrom().equals(flightFrom)) {
                 allFlights.put(flight.getFlightNumber(), flight);
 
             }
@@ -53,7 +53,7 @@ public class FlightFinder {
         System.out.println("Searching connected flights...");
         for (Flight flight : findAllConnections(flightFrom).values()) {
             for (Flight flight1 : findAllConnections(flight.getTravelTo()).values()) {
-                if (flight1.getTravelTo() == flightTo) {
+                if (flight1.getTravelTo().equals(flightTo)) {
                     availableConnectingFlights.put(flight.getFlightNumber(), flight);
                     availableConnectingFlights.put(flight1.getFlightNumber(), flight1);
                 }
