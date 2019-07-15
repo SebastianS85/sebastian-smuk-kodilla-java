@@ -20,9 +20,9 @@ public class BoardTestSuite {
         board.addToInProgressTask("second task");
         board.addToDone("last task");
 
-        Assert.assertEquals(true, board.getToDoList().tasks.contains("first task"));
-        Assert.assertEquals(true, board.getInProgressList().tasks.contains("second task"));
-        Assert.assertEquals(true, board.getDoneList().tasks.contains("last task"));
+        Assert.assertTrue( board.getToDoList().tasks.contains("first task"));
+        Assert.assertTrue( board.getInProgressList().tasks.contains("second task"));
+        Assert.assertTrue (board.getDoneList().tasks.contains("last task"));
 
 
     }
