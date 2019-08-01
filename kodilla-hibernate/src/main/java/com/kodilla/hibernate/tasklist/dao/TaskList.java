@@ -1,9 +1,10 @@
 package com.kodilla.hibernate.tasklist.dao;
 
 
-import com.sun.istack.internal.NotNull;
+
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "TASKSLIST")

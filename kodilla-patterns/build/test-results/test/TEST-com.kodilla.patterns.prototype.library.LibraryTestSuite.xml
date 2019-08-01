@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-07-30T15:17:35" hostname="DESKTOP-GJGJAGF" time="0.007">
+<testsuite name="com.kodilla.patterns.prototype.library.LibraryTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-01T16:36:07" hostname="DESKTOP-GJGJAGF" time="0.008">
   <properties/>
-  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.007"/>
+  <testcase name="testGetBooks" classname="com.kodilla.patterns.prototype.library.LibraryTestSuite" time="0.008"/>
   <system-out><![CDATA[Library name=My First Library
 Books in library:
 [       Book:title=Title10', author='author10', publicationDate=1985-10-20
