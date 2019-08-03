@@ -1,4 +1,5 @@
 package com.kodilla.hibernate.invoice.dao;
+
 import com.kodilla.hibernate.invoice.Invoice;
 import com.kodilla.hibernate.invoice.Item;
 import com.kodilla.hibernate.invoice.Product;
@@ -24,7 +25,7 @@ public class InvoiceDaoTestSuite {
     @Test
     public void testInvoiceDaoSave() {
 
-       //Given
+        //Given
         Item item1 = new Item(new Product("shoes"), new BigDecimal(100), 2);
         Item item2 = new Item(new Product("tv"), new BigDecimal(1000), 1);
         Invoice firstInvoice = new Invoice("first 2019");
@@ -38,7 +39,15 @@ public class InvoiceDaoTestSuite {
         Assert.assertEquals(2, itemDao.count());
         Assert.assertEquals(1, invoiceDao.count());
 
-
-
+//cleanup
+        try {
+            productDao.deleteAll();
+            itemDao.deleteAll();
+            invoiceDao.deleteAll();
+        } catch (Exception e) {
+            //do nothing
+        }
     }
+
+
 }

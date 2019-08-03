@@ -1,9 +1,21 @@
 package com.kodilla.hibernate.manytomany;
 
+import com.kodilla.hibernate.task.Task;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
+
+@NamedNativeQuery(
+        name = "Company.retrieveCompanyWithSof",
+        query = " SELECT *FROM COMPANIES" +
+                " WHERE SUBSTR(COMPANY_NAME , 1, 3) ='Sof'",
+        resultClass = Company.class
+
+
+)
+
 
 @Entity
 @Table(name = "COMPANIES")
