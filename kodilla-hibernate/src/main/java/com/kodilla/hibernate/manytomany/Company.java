@@ -7,10 +7,12 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 @NamedNativeQuery(
         name = "Company.retrieveCompanyWithSof",
         query = " SELECT *FROM COMPANIES" +
-                " WHERE SUBSTR(COMPANY_NAME , 1, 3) ='Sof'",
+                " WHERE SUBSTR(company_name , 1, 3) = :COMPANY_NAME",
         resultClass = Company.class
 
 
