@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.jdbc.DbManagerTestSuite" tests="3" skipped="3" failures="0" errors="0" timestamp="2019-08-02T20:52:17" hostname="DESKTOP-GJGJAGF" time="0.001">
+<testsuite name="com.kodilla.jdbc.DbManagerTestSuite" tests="3" skipped="3" failures="0" errors="0" timestamp="2019-08-03T12:49:11" hostname="DESKTOP-GJGJAGF" time="0.001">
   <properties/>
   <testcase name="testSelectUsers" classname="com.kodilla.jdbc.DbManagerTestSuite" time="0.0">
     <skipped/>
@@ -7,7 +7,7 @@
   <testcase name="testConnect" classname="com.kodilla.jdbc.DbManagerTestSuite" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="testSelectUsersAndPosts" classname="com.kodilla.jdbc.DbManagerTestSuite" time="0.001">
+  <testcase name="testSelectUsersAndPosts" classname="com.kodilla.jdbc.DbManagerTestSuite" time="0.0">
     <skipped/>
   </testcase>
   <system-out><![CDATA[]]></system-out>
