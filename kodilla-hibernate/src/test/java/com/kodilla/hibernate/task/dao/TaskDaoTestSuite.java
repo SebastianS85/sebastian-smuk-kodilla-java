@@ -38,6 +38,7 @@ public class TaskDaoTestSuite {
         //CleanUp
         taskDao.deleteById(id);
     }
+
     @Test
     public void testTaskDaoFindByDuration() {
         //Given
@@ -53,14 +54,15 @@ public class TaskDaoTestSuite {
         Assert.assertEquals(1, ((List) readTasks).size());
 
         //CleanUp
-       int id = readTasks.get(0).getId();
+        int id = readTasks.get(0).getId();
         taskDao.deleteById(id);
     }
+
     @Test
     public void testTaskDaoSaveWithFinancialDetails() {
         //Given
         Task task = new Task(DESCRIPTION, 30);
-        task.setTaskFinancialDetails(new TaskFinancialDetails(new BigDecimal(120), false));
+        // task.setTaskFinancialDetails(new TaskFinancialDetails(new BigDecimal(120), false));
 
         //When
         taskDao.save(task);
@@ -70,9 +72,8 @@ public class TaskDaoTestSuite {
         Assert.assertNotEquals(0, id);
 
         //CleanUp
-         taskDao.deleteById(id);
+        //taskDao.deleteById(id);
     }
-
 
 
 }

@@ -44,7 +44,7 @@ public class CompanyDaoTestSuite {
 
         //When
 
-        companyDao.save(softwareMachine);
+         companyDao.save(softwareMachine);
         int softwareMachineId = softwareMachine.getId();
         companyDao.save(dataMaesters);
         int dataMaestersId = dataMaesters.getId();
@@ -52,19 +52,20 @@ public class CompanyDaoTestSuite {
         int greyMatterId = greyMatter.getId();
         List<Employee> employeesSmith = employeeDao.retrieveEmployeeWithLastname("Smith");
         List<Company> companiesWithSof = companyDao.retrieveCompanyWithSof("Sof");
-        companiesWithSof.toString();
+
         //Then
-        Assert.assertNotEquals(0, softwareMachineId);
-        Assert.assertNotEquals(0, dataMaestersId);
-        Assert.assertNotEquals(0, greyMatterId);
-        Assert.assertEquals(1, employeesSmith.size());
-        Assert.assertEquals(1, companiesWithSof.size());
+         Assert.assertNotEquals(0, softwareMachineId);
+         Assert.assertNotEquals(0, dataMaestersId);
+         Assert.assertNotEquals(0, greyMatterId);
+         Assert.assertEquals(1, employeesSmith.size());
+         Assert.assertEquals(1, companiesWithSof.size());
 
         //CleanUp
         try {
+
             companyDao.deleteById(softwareMachineId);
             companyDao.deleteById(dataMaestersId);
-            companyDao.deleteById(greyMatterId);
+             companyDao.deleteById(greyMatterId);
         } catch (Exception e) {
             //do nothing
         }

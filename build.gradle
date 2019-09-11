@@ -1,9 +1,10 @@
 plugins {
-    id 'org.springframework.boot' version '2.1.5.RELEASE'
+    id 'org.springframework.boot' version '2.1.7.RELEASE'
     id 'java'
 }
 
 apply plugin: 'io.spring.dependency-management'
+apply plugin: org.springframework.boot.gradle.plugin.SpringBootPlugin
 apply plugin: 'java'
 
 group = 'com.kodilla'
