@@ -14,6 +14,13 @@ import java.util.List;
         )
 
 })
+@NamedNativeQuery(
+        name = "Employee.retrieveEmployeeWithNameSign",
+        query = " SELECT *FROM EMPLOYEES" +
+                " WHERE  lastname LIKE CONCAT('%', :NAMEPART,'%')",
+        resultClass =Employee.class
+
+)
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {

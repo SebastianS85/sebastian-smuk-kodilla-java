@@ -52,7 +52,6 @@ public class CompanyDaoTestSuite {
         int greyMatterId = greyMatter.getId();
         List<Employee> employeesSmith = employeeDao.retrieveEmployeeWithLastname("Smith");
         List<Company> companiesWithSof = companyDao.retrieveCompanyWithSof("Sof");
-
         //Then
          Assert.assertNotEquals(0, softwareMachineId);
          Assert.assertNotEquals(0, dataMaestersId);

@@ -13,6 +13,13 @@ import java.util.List;
                 " WHERE SUBSTR(company_name , 1, 3) = :COMPANY_NAME",
         resultClass = Company.class
 
+)
+
+@NamedNativeQuery(
+        name = "Company.retrieveCompanyWithSign",
+        query = " SELECT *FROM COMPANIES" +
+                " WHERE  company_name LIKE CONCAT('%', :NAMEPART,'%')",
+        resultClass = Company.class
 
 )
 
