@@ -1,4 +1,4 @@
-package com.kodilla.kodilla.patterns2;
+package com.kodilla.kodilla.patterns2.decorator;
 
 
 

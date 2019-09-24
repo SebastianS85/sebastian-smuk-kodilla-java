@@ -15,4 +15,7 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    compile('org.springframework.boot:spring-boot-starter-aop')
+    compile group: 'org.aspectj', name: 'aspectjtools', version: '1.6.2'
+
 }

@@ -1,4 +1,4 @@
-package com.kodilla.kodilla.patterns2;
+package com.kodilla.kodilla.patterns2.decorator;
 
 import com.kodilla.kodilla.patterns2.decorator.pizza.BasicPizzaOrder;
 import com.kodilla.kodilla.patterns2.decorator.pizza.DoubleCheeseDecorator;
