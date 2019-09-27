@@ -11,8 +11,11 @@ import java.util.List;
         @NamedQuery(
                 name="Employee.retrieveEmployeeWithLastname",
                 query="FROM Employee WHERE lastname = :LASTNAME"
+        ),
+        @NamedQuery(
+                 name = "Employee.retrieveEmployeeWithNameSign",
+                query="FROM Employees WHERE lastname LIKE CONCAT('%', :NAMEPART,'%')"
         )
-
 })
 @NamedNativeQuery(
         name = "Employee.retrieveEmployeeWithNameSign",
