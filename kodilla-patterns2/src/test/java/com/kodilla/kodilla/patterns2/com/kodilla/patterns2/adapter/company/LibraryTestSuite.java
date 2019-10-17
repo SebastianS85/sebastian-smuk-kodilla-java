@@ -1,9 +1,7 @@
 package com.kodilla.kodilla.patterns2.com.kodilla.patterns2.adapter.company;
 
-import com.kodilla.kodilla.patterns2.adapter.bookclasifier.MedianAdaptee;
 import com.kodilla.kodilla.patterns2.adapter.bookclasifier.MedianAdapter;
-import com.kodilla.kodilla.patterns2.adapter.bookclasifier.librarya.BookA;
-import com.kodilla.kodilla.patterns2.adapter.bookclasifier.libraryb.Statistics;
+import com.kodilla.kodilla.patterns2.adapter.bookclasifier.librarya.Book;
 import org.junit.Test;
 
 import java.util.HashSet;
@@ -16,12 +14,12 @@ public class LibraryTestSuite {
     @Test
     public void medianTestSuite(){
 
-        Set<BookA> bookSet=new HashSet<>();
-        BookA book1=new BookA("author1","title 1",2007,"ab");
-        BookA book2=new BookA("author2","title 2",1985,"abcc");
-        BookA book3=new BookA("author3","title 3",1496,"abtt");
-        BookA book5=new BookA("author3","title 3",1269,"abtt");
-        BookA book4=new BookA("author4","title 4",1998,"abtzt");
+        Set<Book> bookSet=new HashSet<>();
+        Book book1=new Book("author1","title 1",2007,"ab");
+        Book book2=new Book("author2","title 2",1985,"abcc");
+        Book book3=new Book("author3","title 3",1496,"abtt");
+        Book book5=new Book("author3","title 3",1269,"abtt");
+        Book book4=new Book("author4","title 4",1998,"abtzt");
         bookSet.add(book1);
         bookSet.add(book2);
         bookSet.add(book3);
